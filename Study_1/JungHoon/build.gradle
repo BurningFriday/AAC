@@ -27,6 +27,7 @@ buildscript {
         junitVersion = '4.12'
         runnerExtVersion = '1.1.0'
         espressoVersion = '3.1.0-alpha4'
+        androidXTestVersion = '1.1.1'
     }
 }
 
