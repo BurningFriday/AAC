@@ -20,5 +20,8 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, PlainActivity::class.java))
         }
 
+        go_to_bind_1.setOnClickListener {
+
+        }
     }
 }
