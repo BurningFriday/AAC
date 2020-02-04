@@ -1,6 +1,7 @@
 package study.junghoon.app.aac_study.sample1
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import study.junghoon.app.aac_study.R
 
@@ -10,4 +11,6 @@ class Sample1Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sample1)
     }
+
+    fun onLike(view: View) {}
 }
