@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import study.junghoon.app.aac_study.plain.PlainActivity
+import study.junghoon.app.aac_study.sample1.Sample1Activity
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         go_to_bind_1.setOnClickListener {
-
+            startActivity(Intent(this, Sample1Activity::class.java))
         }
     }
 }

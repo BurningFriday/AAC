@@ -1,10 +1,9 @@
-package study.junghoon.app.aac_study.sample1
+package study.junghoon.app.aac_study.sample2
 
 import android.content.Context
 import android.content.res.ColorStateList
 import android.graphics.drawable.Drawable
 import android.os.Bundle
-import android.view.View
 import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
@@ -14,29 +13,23 @@ import androidx.core.widget.ImageViewCompat
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
 import study.junghoon.app.aac_study.R
-import study.junghoon.app.aac_study.databinding.ActivitySample1Binding
+import study.junghoon.app.aac_study.databinding.ActivitySample2Binding
 import study.junghoon.app.aac_study.plain.data.Popularity
 import study.junghoon.app.aac_study.plain.data.SimpleViewModel
 
-class Sample1Activity : AppCompatActivity() {
+class Sample2Activity : AppCompatActivity() {
 
     private val viewModel by lazy { ViewModelProviders.of(this).get(SimpleViewModel::class.java) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_sample1)
-        val binding : ActivitySample1Binding=
-            DataBindingUtil.setContentView(this, R.layout.activity_sample1)
+        val binding : ActivitySample2Binding =
+            DataBindingUtil.setContentView(this, R.layout.activity_sample2)
 
-        /**
-         * 이를 통해 이전 액티비티에서 메서드를 통해 초기화했던 부분을 생략할 수 있다.
-         */
-        binding.name = "JungHoon"
-        binding.lastName = "Park"
-    }
 
-    fun onLike(view: View) {
-        viewModel.onLike()
+        binding.viewmodel = viewModel
+        binding.lifecycleOwner = this
+
         updateLikes()
     }
 

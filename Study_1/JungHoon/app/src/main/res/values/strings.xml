@@ -10,4 +10,5 @@
     <string name="name_label">Name</string>
     <string name="like">Like</string>
     <string name="go_to_data_binding_sample1">Go to DataBinding Sample1</string>
+    <string name="go_to_data_binding_sample2">Go to DataBinding Sample2</string>
 </resources>
